@@ -16,3 +16,57 @@ mypy = "^1.11.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py310"
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100",   # Disable check for missing docstring in public module
+    "D101",   # Disable check for missing docstring in public class
+    "D102",   # Disable check for missing docstring in public method
+    "D103",   # Disable check for missing docstring in public function
+    "D104",   # Disable check for missing docstring in public package
+    "D106",   # Disable check for missing docstring in public nested class
+    "D107",   # Disable check for missing docstring in __init__
+    "CPY001", # Disable check for copyright notice
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.per-file-ignores]
+"**test**" = [
+    "S101",   # Disable check for use of assert in tests
+    "SLF001", # Disable check for use of private members in tests
+] 
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+[tool.mypy]
+strict = true
+warn_return_any = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".venv",
+    ".vscode",
+]
