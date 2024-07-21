@@ -1,6 +1,6 @@
 from docker import DockerClient
 
-from tests.utils import NGINX_DIRECTORY, str_from_logs
+from tests.utils import IMAGE_TAG, NGINX_DIRECTORY, str_from_logs
 
 
 def test_build(client: DockerClient) -> None:
@@ -9,7 +9,7 @@ def test_build(client: DockerClient) -> None:
         dockerfile="Dockerfile",
         rm=True,
         forcerm=True,
-        tag="test",
+        tag=IMAGE_TAG,
     )
     image.remove(force=True)
     logs_str: str = str_from_logs(logs)
