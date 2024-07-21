@@ -35,6 +35,7 @@ def test_run(client: DockerClient, image: Image) -> None:
     assert "server_name nginx;" in nginx_configuration
     assert "server_tokens off;" in nginx_configuration
     assert f"{web_server_host}:{web_server_port}" in nginx_configuration
+    assert "${" not in nginx_configuration
 
     attrs: dict[str, Any] = container.attrs
     assert attrs.get("Path") == "/usr/local/bin/launch.sh"
