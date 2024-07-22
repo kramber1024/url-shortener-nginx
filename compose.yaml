@@ -5,6 +5,8 @@ services:
     container_name: nginx
 
     build:
+      tags:
+        - nginx:latest
       context: ./nginx
       dockerfile: Dockerfile
 
