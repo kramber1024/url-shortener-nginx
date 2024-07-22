@@ -105,7 +105,7 @@ Change directory:
 cd url-shortener-nginx
 ```
 
-## Preparing the environment
+### Preparing the environment
 
 Create a virtual environment:
 ```bash
@@ -134,7 +134,9 @@ Install dependencies:
 poetry install --only main --no-root
 ```
 
-Run the tests:
+### Running the tests
+
+Run the tests using the following command:
 ```bash
 pytest
 ```
