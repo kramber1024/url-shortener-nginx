@@ -139,7 +139,9 @@ Run the tests using the following command:
 ```bash
 pytest
 ```
-⚠️ **Make sure that Docker is running before running the tests.**
+
+> [!NOTE]
+> Make sure that Docker is running before running the tests.
 
 ```bash
 ======================== test session starts ========================
