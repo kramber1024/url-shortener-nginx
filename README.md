@@ -1,6 +1,7 @@
 # URL Shortener NGINX
 
 <a href="https://github.com/kramber1024/url-shortener-nginx/actions/workflows/tests.yml" target="_blank"><img src="https://github.com/kramber1024/url-shortener-nginx/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+<a href="./LICENSE" target="_blank"><img src="https://img.shields.io/github/license/kramber1024/url-shortener-nginx" alt="License"></a>
 
 ## Features
 
