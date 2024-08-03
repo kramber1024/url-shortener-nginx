@@ -17,7 +17,8 @@
 
 - 🐋 [**Docker**](https://www.docker.com/)
 
-Please ensure that Docker is properly configured and *running* on your system.
+> [!NOTE]
+> Please ensure that Docker is properly configured and running on your system.
 
 ### Installation
 
