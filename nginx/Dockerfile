@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 
-COPY ./launch.sh /usr/local/bin/launch.sh
+COPY ./entrypoint.sh /usr/local/bin/
 
 RUN apt-get update && \
     apt-get install --no-install-recommends --no-install-suggests -y gettext nginx && \
@@ -10,10 +10,10 @@ RUN apt-get update && \
     rm -rf /etc/nginx/sites-available/* && \
     rm -rf /etc/nginx/nginx.conf && \
     rm -rf /var/www/html/* && \
-    chmod +x /usr/local/bin/launch.sh
+    chmod +x /usr/local/bin/entrypoint.sh
 
 COPY ./nginx.conf /etc/nginx/templates/nginx.conf.template
 
 EXPOSE 80 443
 
-CMD [ "/usr/local/bin/launch.sh", "nginx", "-g", "daemon off;" ]
+CMD [ "/usr/local/bin/entrypoint.sh" ]
