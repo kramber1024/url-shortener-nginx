@@ -4,6 +4,7 @@
         "**/.mypy_cache": true,
         "**/.pytest_cache": true,
     },
+    "files.eol": "\n",
     "python.analysis.autoImportCompletions": true,
     "python.testing.pytestEnabled": true,
     "mypy-type-checker.importStrategy": "fromEnvironment",
